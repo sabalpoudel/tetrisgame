@@ -10,7 +10,7 @@ import { useInterval } from "../hooks/useInterval";
 import { useGameStatus } from "../hooks/useGameStatus";
 import DisplayControls from "./DisplayControls";
 
-const Tetris = ({}) => {
+const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [pauseGame, setPauseGame] = useState(false);
@@ -115,7 +115,7 @@ const Tetris = ({}) => {
           <ActionButton
             text={pauseGame ? "|> Resume Game" : "II Pause Game"}
             callback={callPauseGame}
-            disabled={gameOver || player?.tetromino.length === 1}
+            disabled={gameOver || player.tetromino.length === 1}
           />
           <DisplayControls />
         </aside>
