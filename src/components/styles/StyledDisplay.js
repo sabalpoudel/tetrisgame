@@ -36,4 +36,10 @@ export const StyledDisplayControls = styled.div`
   li {
     margin-bottom: 5px;
   }
+  .scores {
+    text-align: center;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #333;
+    padding: 10px 0;
+  }
 `;

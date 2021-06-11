@@ -5,11 +5,16 @@ import ActionButton from "./ActionButton";
 import { StyledTetrisWrapper, StyledTetris } from "./styles/StyledTetris";
 import { useStage } from "../hooks/useStage";
 import { usePlayer } from "../hooks/usePlayer";
-import { checkCollision, createStage, findCollisionIndex } from "../gameHelper";
+import {
+  checkCollision,
+  createStage,
+  findCollisionIndex,
+} from "../helpers/gameHelper";
 import { useInterval } from "../hooks/useInterval";
 import { useGameStatus } from "../hooks/useGameStatus";
-import DisplayControls from "./DisplayControls";
+import DisplayControls, { HighScore } from "./DisplayControls";
 import UpcomingTetris from "./UpcomingTetris";
+import { checkAndUpdateScore } from "../helpers/score";
 
 const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
@@ -58,6 +63,7 @@ const Tetris = () => {
       updatePlayerPos({ x: 0, y: 1, collided: false });
     else {
       if (player.pos.y < 1) {
+        checkAndUpdateScore(score);
         setGameOver(true);
         setDropTime(false);
       }
@@ -159,6 +165,7 @@ const Tetris = () => {
             }
             callback={startGame}
           />
+          <HighScore gameOver={gameOver} />
         </aside>
       </StyledTetris>
     </StyledTetrisWrapper>
