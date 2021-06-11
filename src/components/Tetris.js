@@ -47,7 +47,6 @@ const Tetris = () => {
   };
 
   const drop = () => {
-    console.log("object");
     //increase level for every 10 rows
     if (rows > (level + 1) * 10) {
       setLevel((p) => p + 1);
@@ -81,18 +80,23 @@ const Tetris = () => {
 
   const move = ({ keyCode }) => {
     console.log("move", keyCode);
-    if (keyCode === 37) {
-      //leftArrow
-      movePlayer(-1);
-    } else if (keyCode === 39) {
-      //rightArrow
-      movePlayer(1);
-    } else if (keyCode === 40) {
-      //downArrow
-      dropPlayer(1);
-    } else if (keyCode === 38) {
-      //upArrow
-      playerRotate(stage, 1);
+    if (!gameOver && !pauseGame) {
+      if (keyCode === 37) {
+        //leftArrow
+        movePlayer(-1);
+      } else if (keyCode === 39) {
+        //rightArrow
+        movePlayer(1);
+      } else if (keyCode === 40) {
+        //downArrow
+        dropPlayer(1);
+      } else if (keyCode === 38) {
+        //upArrow
+        playerRotate(stage, 1);
+      }
+    }
+    if (keyCode === 13) {
+      callPauseGame();
     }
   };
 
@@ -115,7 +119,7 @@ const Tetris = () => {
       role="button"
       tabIndex="0"
       onKeyUp={(e) => !gameOver && !pauseGame && keyUp(e)}
-      onKeyDown={(e) => !gameOver && !pauseGame && move(e)}
+      onKeyDown={(e) => move(e)}
     >
       <StyledTetris>
         <aside>

@@ -17,6 +17,7 @@ const DisplayControls = () => (
       <li>
         Rotate :<br /> Up Arrow
       </li>
+      <li>Pause : Enter</li>
     </ul>
   </StyledDisplayControls>
 );
