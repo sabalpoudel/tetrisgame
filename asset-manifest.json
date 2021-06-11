@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/tetrisgame/static/css/main.ed4faee8.chunk.css",
-    "main.js": "/tetrisgame/static/js/main.3347c198.chunk.js",
-    "main.js.map": "/tetrisgame/static/js/main.3347c198.chunk.js.map",
-    "runtime-main.js": "/tetrisgame/static/js/runtime-main.cae9e737.js",
-    "runtime-main.js.map": "/tetrisgame/static/js/runtime-main.cae9e737.js.map",
-    "static/js/2.940a77e2.chunk.js": "/tetrisgame/static/js/2.940a77e2.chunk.js",
-    "static/js/2.940a77e2.chunk.js.map": "/tetrisgame/static/js/2.940a77e2.chunk.js.map",
-    "static/js/3.0384e8e9.chunk.js": "/tetrisgame/static/js/3.0384e8e9.chunk.js",
-    "static/js/3.0384e8e9.chunk.js.map": "/tetrisgame/static/js/3.0384e8e9.chunk.js.map",
+    "main.js": "/tetrisgame/static/js/main.f51a7ba1.chunk.js",
+    "main.js.map": "/tetrisgame/static/js/main.f51a7ba1.chunk.js.map",
+    "runtime-main.js": "/tetrisgame/static/js/runtime-main.a7294f57.js",
+    "runtime-main.js.map": "/tetrisgame/static/js/runtime-main.a7294f57.js.map",
+    "static/js/2.75b47dcc.chunk.js": "/tetrisgame/static/js/2.75b47dcc.chunk.js",
+    "static/js/2.75b47dcc.chunk.js.map": "/tetrisgame/static/js/2.75b47dcc.chunk.js.map",
+    "static/js/3.110720bd.chunk.js": "/tetrisgame/static/js/3.110720bd.chunk.js",
+    "static/js/3.110720bd.chunk.js.map": "/tetrisgame/static/js/3.110720bd.chunk.js.map",
     "index.html": "/tetrisgame/index.html",
     "static/css/main.ed4faee8.chunk.css.map": "/tetrisgame/static/css/main.ed4faee8.chunk.css.map",
-    "static/js/2.940a77e2.chunk.js.LICENSE.txt": "/tetrisgame/static/js/2.940a77e2.chunk.js.LICENSE.txt",
+    "static/js/2.75b47dcc.chunk.js.LICENSE.txt": "/tetrisgame/static/js/2.75b47dcc.chunk.js.LICENSE.txt",
     "static/media/index.css": "/tetrisgame/static/media/Pixel-LCD-7.63d9c151.woff",
     "static/media/bg.d63cfd51.png": "/tetrisgame/static/media/bg.d63cfd51.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.cae9e737.js",
-    "static/js/2.940a77e2.chunk.js",
+    "static/js/runtime-main.a7294f57.js",
+    "static/js/2.75b47dcc.chunk.js",
     "static/css/main.ed4faee8.chunk.css",
-    "static/js/main.3347c198.chunk.js"
+    "static/js/main.f51a7ba1.chunk.js"
   ]
 }
