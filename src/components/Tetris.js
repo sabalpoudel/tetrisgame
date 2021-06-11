@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import Stage from "./Stage";
 import Display from "./Display";
-import StartButton from "./StartButton";
+import ActionButton from "./ActionButton";
 import { StyledTetrisWrapper, StyledTetris } from "./styles/StyledTetris";
 import { useStage } from "../hooks/useStage";
 import { usePlayer } from "../hooks/usePlayer";
 import { checkCollision, createStage } from "../gameHelper";
 import { useInterval } from "../hooks/useInterval";
 import { useGameStatus } from "../hooks/useGameStatus";
+import DisplayControls from "./DisplayControls";
 
 const Tetris = ({}) => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
+  const [pauseGame, setPauseGame] = useState(false);
 
   const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
   const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
@@ -21,7 +23,6 @@ const Tetris = ({}) => {
   const movePlayer = (dir) => {
     console.log({ dir });
     if (!checkCollision(player, stage, { x: dir, y: 0 })) {
-      console.log("object");
       updatePlayerPos({ x: dir, y: 0 });
     }
   };
@@ -31,6 +32,7 @@ const Tetris = ({}) => {
     setStage(createStage());
     setDropTime(1000 / (level + 1) + 200);
     resetPlayer();
+    setPauseGame(false);
     setGameOver(false);
     setScore(0);
     setRows(0);
@@ -38,6 +40,7 @@ const Tetris = ({}) => {
   };
 
   const drop = () => {
+    console.log("object");
     //increase level for every 10 rows
     if (rows > (level + 1) * 10) {
       setLevel((p) => p + 1);
@@ -57,49 +60,67 @@ const Tetris = ({}) => {
   };
 
   const keyUp = ({ keyCode }) => {
-    if (!gameOver) {
-      if (keyCode === 40) {
-        //leftArrow
-        setDropTime(1000 / (level + 1) + 200);
-      }
+    console.log("keyUp", keyCode);
+    if (keyCode === 40) {
+      //uptArrow
+      setDropTime(1000 / (level + 1) + 200);
     }
   };
   const dropPlayer = () => {
+    console.log("dropPlayer");
     setDropTime(null);
     drop();
   };
 
   const move = ({ keyCode }) => {
-    if (!gameOver) {
-      if (keyCode === 37) {
-        //leftArrow
-        movePlayer(-1);
-      } else if (keyCode === 39) {
-        //rightArrow
-        movePlayer(1);
-      } else if (keyCode === 40) {
-        //downArrow
-        dropPlayer(1);
-      } else if (keyCode === 38) {
-        //upArrow
-        playerRotate(stage, 1);
-      }
+    console.log("move", keyCode);
+    if (keyCode === 37) {
+      //leftArrow
+      movePlayer(-1);
+    } else if (keyCode === 39) {
+      //rightArrow
+      movePlayer(1);
+    } else if (keyCode === 40) {
+      //downArrow
+      dropPlayer(1);
+    } else if (keyCode === 38) {
+      //upArrow
+      playerRotate(stage, 1);
     }
   };
 
   useInterval(() => {
-    drop();
+    !gameOver && drop();
   }, dropTime);
 
+  const callPauseGame = () => {
+    console.log("callPauseGame");
+    if (pauseGame) {
+      setPauseGame(false);
+      setDropTime(1000 / (level + 1) + 200);
+    } else {
+      setDropTime(null);
+      setPauseGame(true);
+    }
+  };
   return (
     <StyledTetrisWrapper
       role="button"
       tabIndex="0"
-      onKeyUp={(e) => keyUp(e)}
-      onKeyDown={(e) => move(e)}
+      onKeyUp={(e) => !gameOver && !pauseGame && keyUp(e)}
+      onKeyDown={(e) => !gameOver && !pauseGame && move(e)}
     >
       <StyledTetris>
-        <Stage stage={stage} />
+        <aside>
+          <ActionButton
+            text={pauseGame ? "|> Resume Game" : "II Pause Game"}
+            callback={callPauseGame}
+            disabled={gameOver || player?.tetromino.length === 1}
+          />
+          <DisplayControls />
+        </aside>
+        <Stage stage={stage} pauseGame={pauseGame} gameOver={gameOver} />
+
         <aside>
           {gameOver ? (
             <Display gameOver={gameOver} text={"Game Over"} />
@@ -110,7 +131,7 @@ const Tetris = ({}) => {
               <Display text={`Level ${level}`} />
             </div>
           )}
-          <StartButton callback={startGame} />
+          <ActionButton text="Start Game" callback={startGame} />
         </aside>
       </StyledTetris>
     </StyledTetrisWrapper>
