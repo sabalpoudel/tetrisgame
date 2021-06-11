@@ -5,6 +5,7 @@ const DisplayControls = () => (
   <StyledDisplayControls>
     <p>Controls</p>
     <ul>
+      <li>Pause : Enter</li>
       <li>
         Move right :<br /> Right Arrow{" "}
       </li>
@@ -17,7 +18,9 @@ const DisplayControls = () => (
       <li>
         Rotate :<br /> Up Arrow
       </li>
-      <li>Pause : Enter</li>
+      <li>
+        Full Drop :<br /> Space bar
+      </li>
     </ul>
   </StyledDisplayControls>
 );

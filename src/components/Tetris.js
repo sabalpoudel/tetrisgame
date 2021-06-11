@@ -5,7 +5,7 @@ import ActionButton from "./ActionButton";
 import { StyledTetrisWrapper, StyledTetris } from "./styles/StyledTetris";
 import { useStage } from "../hooks/useStage";
 import { usePlayer } from "../hooks/usePlayer";
-import { checkCollision, createStage } from "../gameHelper";
+import { checkCollision, createStage, findCollisionIndex } from "../gameHelper";
 import { useInterval } from "../hooks/useInterval";
 import { useGameStatus } from "../hooks/useGameStatus";
 import DisplayControls from "./DisplayControls";
@@ -67,7 +67,7 @@ const Tetris = () => {
 
   const keyUp = ({ keyCode }) => {
     console.log("keyUp", keyCode);
-    if (keyCode === 40) {
+    if (keyCode === 40 || keyCode === 32) {
       //uptArrow
       setDropTime(1000 / (level + 1) + 200);
     }
@@ -93,13 +93,21 @@ const Tetris = () => {
       } else if (keyCode === 38) {
         //upArrow
         playerRotate(stage, 1);
+      } else if (keyCode === 32) {
+        //space
+        updatePlayerPos({
+          x: 0,
+          y: findCollisionIndex(player, stage),
+          collided: true,
+        });
+        setDropTime(100);
       }
     }
-    if (keyCode === 13) {
+    if (!gameOver && keyCode === 13) {
+      // enter
       callPauseGame();
     }
   };
-
   useInterval(() => {
     !gameOver && drop();
   }, dropTime);

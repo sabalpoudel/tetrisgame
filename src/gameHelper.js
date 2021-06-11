@@ -27,3 +27,10 @@ export const checkCollision = (player, stage, { x: moveX, y: moveY }) => {
     }
   }
 };
+
+export const findCollisionIndex = (player, stage) => {
+  for (let i = 1; i <= STAGE_HEIGHT; ++i) {
+    let collideAt = checkCollision(player, stage, { x: 0, y: i });
+    if (collideAt) return i - 1;
+  }
+};
