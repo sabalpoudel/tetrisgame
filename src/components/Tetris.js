@@ -9,13 +9,20 @@ import { checkCollision, createStage } from "../gameHelper";
 import { useInterval } from "../hooks/useInterval";
 import { useGameStatus } from "../hooks/useGameStatus";
 import DisplayControls from "./DisplayControls";
+import UpcomingTetris from "./UpcomingTetris";
 
 const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [pauseGame, setPauseGame] = useState(false);
 
-  const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
+  const [
+    player,
+    updatePlayerPos,
+    resetPlayer,
+    playerRotate,
+    upComingTetromino,
+  ] = usePlayer();
   const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
   const [score, setScore, rows, setRows, level, setLevel] =
     useGameStatus(rowsCleared);
@@ -117,21 +124,29 @@ const Tetris = () => {
             callback={callPauseGame}
             disabled={gameOver || player.tetromino.length === 1}
           />
+          <UpcomingTetris tetromino={upComingTetromino} />
           <DisplayControls />
         </aside>
         <Stage stage={stage} pauseGame={pauseGame} gameOver={gameOver} />
 
         <aside>
-          {gameOver ? (
+          {/* {gameOver ? (
             <Display gameOver={gameOver} text={"Game Over"} />
-          ) : (
-            <div>
-              <Display text={`Score ${score}`} />
-              <Display text={`Rows ${rows}`} />
-              <Display text={`Level ${level}`} />
-            </div>
-          )}
-          <ActionButton text="Start Game" callback={startGame} />
+          ) : ( */}
+          <div>
+            <Display text={`Score ${score}`} />
+            <Display text={`Rows ${rows}`} />
+            <Display text={`Level ${level}`} />
+          </div>
+          {/* )} */}
+          <ActionButton
+            text={
+              player.tetromino.length === 1 || gameOver
+                ? "Start Game"
+                : "Reset Game"
+            }
+            callback={startGame}
+          />
         </aside>
       </StyledTetris>
     </StyledTetrisWrapper>
