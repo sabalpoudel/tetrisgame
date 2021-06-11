@@ -1,6 +1,6 @@
 {
   "name": "react-tetris",
-  "homepage": "https://github.com/z0r0O/tetrisgame/",
+  "homepage": "https://z0r0o.github.io/tetrisgame",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
