@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tetrisgame/static/css/main.ed4faee8.chunk.css",
-    "main.js": "/tetrisgame/static/js/main.f51a7ba1.chunk.js",
-    "main.js.map": "/tetrisgame/static/js/main.f51a7ba1.chunk.js.map",
+    "main.js": "/tetrisgame/static/js/main.b127f5b9.chunk.js",
+    "main.js.map": "/tetrisgame/static/js/main.b127f5b9.chunk.js.map",
     "runtime-main.js": "/tetrisgame/static/js/runtime-main.a7294f57.js",
     "runtime-main.js.map": "/tetrisgame/static/js/runtime-main.a7294f57.js.map",
     "static/js/2.75b47dcc.chunk.js": "/tetrisgame/static/js/2.75b47dcc.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.a7294f57.js",
     "static/js/2.75b47dcc.chunk.js",
     "static/css/main.ed4faee8.chunk.css",
-    "static/js/main.f51a7ba1.chunk.js"
+    "static/js/main.b127f5b9.chunk.js"
   ]
 }
