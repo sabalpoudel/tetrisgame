@@ -21,11 +21,11 @@ const StyledSmallStage = styled.div`
   display: grid;
   grid-template-rows: repeat(
     ${(props) => props.height},
-    calc(5vw / ${(props) => props.width})
+    calc(4vw / ${(props) => props.width})
   );
   width: 100%;
   grid-gap: 1px;
-  max-width: 5vw;
+  max-width: 4vw;
   grid-template-columns: repeat(${(props) => props.width}, 1fr);
   margin-left: auto;
   background-color: "#000";
