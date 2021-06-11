@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/z0r0O/tetrisgame/static/css/main.ed50c723.chunk.css",
-    "main.js": "/z0r0O/tetrisgame/static/js/main.3347c198.chunk.js",
-    "main.js.map": "/z0r0O/tetrisgame/static/js/main.3347c198.chunk.js.map",
-    "runtime-main.js": "/z0r0O/tetrisgame/static/js/runtime-main.ed3be6b1.js",
-    "runtime-main.js.map": "/z0r0O/tetrisgame/static/js/runtime-main.ed3be6b1.js.map",
-    "static/js/2.e0bc3d59.chunk.js": "/z0r0O/tetrisgame/static/js/2.e0bc3d59.chunk.js",
-    "static/js/2.e0bc3d59.chunk.js.map": "/z0r0O/tetrisgame/static/js/2.e0bc3d59.chunk.js.map",
-    "static/js/3.0384e8e9.chunk.js": "/z0r0O/tetrisgame/static/js/3.0384e8e9.chunk.js",
-    "static/js/3.0384e8e9.chunk.js.map": "/z0r0O/tetrisgame/static/js/3.0384e8e9.chunk.js.map",
-    "index.html": "/z0r0O/tetrisgame/index.html",
-    "static/css/main.ed50c723.chunk.css.map": "/z0r0O/tetrisgame/static/css/main.ed50c723.chunk.css.map",
-    "static/js/2.e0bc3d59.chunk.js.LICENSE.txt": "/z0r0O/tetrisgame/static/js/2.e0bc3d59.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/z0r0O/tetrisgame/static/media/Pixel-LCD-7.63d9c151.woff",
-    "static/media/bg.d63cfd51.png": "/z0r0O/tetrisgame/static/media/bg.d63cfd51.png"
+    "main.css": "/tetrisgame/static/css/main.ed4faee8.chunk.css",
+    "main.js": "/tetrisgame/static/js/main.3347c198.chunk.js",
+    "main.js.map": "/tetrisgame/static/js/main.3347c198.chunk.js.map",
+    "runtime-main.js": "/tetrisgame/static/js/runtime-main.cae9e737.js",
+    "runtime-main.js.map": "/tetrisgame/static/js/runtime-main.cae9e737.js.map",
+    "static/js/2.940a77e2.chunk.js": "/tetrisgame/static/js/2.940a77e2.chunk.js",
+    "static/js/2.940a77e2.chunk.js.map": "/tetrisgame/static/js/2.940a77e2.chunk.js.map",
+    "static/js/3.0384e8e9.chunk.js": "/tetrisgame/static/js/3.0384e8e9.chunk.js",
+    "static/js/3.0384e8e9.chunk.js.map": "/tetrisgame/static/js/3.0384e8e9.chunk.js.map",
+    "index.html": "/tetrisgame/index.html",
+    "static/css/main.ed4faee8.chunk.css.map": "/tetrisgame/static/css/main.ed4faee8.chunk.css.map",
+    "static/js/2.940a77e2.chunk.js.LICENSE.txt": "/tetrisgame/static/js/2.940a77e2.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/tetrisgame/static/media/Pixel-LCD-7.63d9c151.woff",
+    "static/media/bg.d63cfd51.png": "/tetrisgame/static/media/bg.d63cfd51.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ed3be6b1.js",
-    "static/js/2.e0bc3d59.chunk.js",
-    "static/css/main.ed50c723.chunk.css",
+    "static/js/runtime-main.cae9e737.js",
+    "static/js/2.940a77e2.chunk.js",
+    "static/css/main.ed4faee8.chunk.css",
     "static/js/main.3347c198.chunk.js"
   ]
 }
