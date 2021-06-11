@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tetrisgame/static/css/main.ed4faee8.chunk.css",
-    "main.js": "/tetrisgame/static/js/main.b127f5b9.chunk.js",
-    "main.js.map": "/tetrisgame/static/js/main.b127f5b9.chunk.js.map",
+    "main.css": "/tetrisgame/static/css/main.dc3825f1.chunk.css",
+    "main.js": "/tetrisgame/static/js/main.e8898245.chunk.js",
+    "main.js.map": "/tetrisgame/static/js/main.e8898245.chunk.js.map",
     "runtime-main.js": "/tetrisgame/static/js/runtime-main.a7294f57.js",
     "runtime-main.js.map": "/tetrisgame/static/js/runtime-main.a7294f57.js.map",
     "static/js/2.75b47dcc.chunk.js": "/tetrisgame/static/js/2.75b47dcc.chunk.js",
@@ -10,15 +10,14 @@
     "static/js/3.110720bd.chunk.js": "/tetrisgame/static/js/3.110720bd.chunk.js",
     "static/js/3.110720bd.chunk.js.map": "/tetrisgame/static/js/3.110720bd.chunk.js.map",
     "index.html": "/tetrisgame/index.html",
-    "static/css/main.ed4faee8.chunk.css.map": "/tetrisgame/static/css/main.ed4faee8.chunk.css.map",
+    "static/css/main.dc3825f1.chunk.css.map": "/tetrisgame/static/css/main.dc3825f1.chunk.css.map",
     "static/js/2.75b47dcc.chunk.js.LICENSE.txt": "/tetrisgame/static/js/2.75b47dcc.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/tetrisgame/static/media/Pixel-LCD-7.63d9c151.woff",
-    "static/media/bg.d63cfd51.png": "/tetrisgame/static/media/bg.d63cfd51.png"
+    "static/media/index.css": "/tetrisgame/static/media/bg.d63cfd51.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a7294f57.js",
     "static/js/2.75b47dcc.chunk.js",
-    "static/css/main.ed4faee8.chunk.css",
-    "static/js/main.b127f5b9.chunk.js"
+    "static/css/main.dc3825f1.chunk.css",
+    "static/js/main.e8898245.chunk.js"
   ]
 }
